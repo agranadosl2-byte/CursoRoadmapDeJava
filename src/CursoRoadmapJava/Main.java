@@ -4,14 +4,15 @@ public class Main {
 
     public static void main(String[] args) {
         
-        // Llamamos a los métodos que llevamos hasta ahora
         Enum();
         Excepciones();
-
+        herencia();   
+        Herencia();   
+        
     }
 
     // --------------------------------------------------
-    // 1. MÉTODO ENUM 
+    // 1. MÉTODO ENUM
     // --------------------------------------------------
     public static void Enum() {
         Enum.Color miColor = Enum.Color.AZUL;
@@ -29,24 +30,46 @@ public class Main {
     }
 
     // --------------------------------------------------
-    // 2. MÉTODO EXCEPCIONES 
+    // 2. MÉTODO EXCEPCIONES
     // --------------------------------------------------
     public static void Excepciones() {
         Excepcion ej = new Excepcion();
 
-        // ---------- EJEMPLO 1 ----------
         System.out.println("\n---------- DIVISION ----------");
         try {
-            ej.dividir(100, 25); // funciona (da 4)
-            ej.dividir(100, 0);  // falla y salta al catch
+            ej.dividir(100, 25);
+            ej.dividir(100, 0); 
         } catch (ArithmeticException e) {
             System.out.println("Error matemático detectado: " + e.getMessage());
         }
 
-        // ---------- EJEMPLO 2 ----------
         System.out.println("\n---------- CONVERSION ----------");
-        ej.convertir("2026");      // funciona
-        ej.convertir("Guatemala"); // falla y el catch de la clase Excepcion lo atrapa
+        ej.convertir("2026");      
+        ej.convertir("Guatemala"); 
+    }
+
+    // --------------------------------------------------
+    // 3. MÉTODO HERENCIA (Prueba del Padre)
+    // --------------------------------------------------
+    public static void herencia() {
+        System.out.println("\n---------- CLASE PADRE (Persona) ----------");
+        // Nuevo ejemplo
+        Persona p1 = new Persona("Maria", 25);
+        
+        System.out.println("El nombre es " + p1.getNombre());
+        System.out.println("La edad es " + p1.getEdad());
+    }
+
+    // --------------------------------------------------
+    // 4. MÉTODO HERENCIA (Prueba del Hijo)
+    // --------------------------------------------------
+    public static void Herencia() {
+        System.out.println("\n---------- CLASE HIJA (Usuario) ----------");
+        // Nuevo ejemplo usando el hijo
+        Usuario n = new Usuario("Pedro", 30);
+        
+        n.setNum(1050); // Le asignamos un ID diferente
+        System.out.println(n.toString());
     }
 
 }
