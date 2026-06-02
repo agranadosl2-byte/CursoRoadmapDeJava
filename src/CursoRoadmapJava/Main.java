@@ -7,7 +7,8 @@ public class Main {
         Enum();
         Excepciones();
         herencia();   
-        Herencia();   
+        Herencia();  
+        instancia();
         
     }
 
@@ -70,6 +71,19 @@ public class Main {
         
         n.setNum(1050); // Le asignamos un ID diferente
         System.out.println(n.toString());
+    }
+    
+ // --------------------------------------------------
+    // 5. MÉTODO BLOQUE DE INSTANCIA (¡El nuevo!)
+    // --------------------------------------------------
+    public static void instancia() {
+        System.out.println("\n---------- BLOQUE DE INSTANCIA ----------");
+        
+        // Al crear este objeto, verás que primero se imprime el bloque de instancia y luego el constructor
+        InstanciaBloke va = new InstanciaBloke();
+        
+        va.mostrar();
+        va.sumar(15); // Sumamos un valor nuevo
     }
 
 }
