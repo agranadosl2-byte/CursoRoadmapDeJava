@@ -12,7 +12,7 @@ public class Main {
         modificador_de_acceso();
         refernciayvalor();
         sobreCarga();
-        
+        type_casting();
     }
 
     // --------------------------------------------------
@@ -145,6 +145,19 @@ public class Main {
         System.out.println("Suma de 2 enteros (10 + 50): " + n.suma(10, 50));
         System.out.println("Suma de 3 enteros (4 + 4 + 4): " + n.suma(4, 4, 4));
         System.out.println("Suma de 3 decimales (2.5 + 2.5 + 2.5): " + n.suma(2.5, 2.5, 2.5));
+    }
+    
+ // --------------------------------------------------
+    // 9. MÉTODO TYPE CASTING (¡El nuevo y final!)
+    // --------------------------------------------------
+    public static void type_casting() {
+        System.out.println("\n---------- TYPE CASTING ----------");
+        
+        TypeCasting t = new TypeCasting();
+        
+        t.intADouble();
+        t.intAString();
+        t.stringAInt();
     }
 
 }
