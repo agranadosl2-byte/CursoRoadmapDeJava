@@ -11,6 +11,7 @@ public class Main {
         instancia();
         modificador_de_acceso();
         refernciayvalor();
+        sobreCarga();
         
     }
 
@@ -130,6 +131,20 @@ public class Main {
         System.out.println("Antes de la función (posición 0): " + miArreglo[0]);
         p.cambiarArreglo(miArreglo);
         System.out.println("Después de la función (posición 0): " + miArreglo[0]); // SÍ cambia, ahora es 999
+    }
+    
+ // --------------------------------------------------
+    // 8. MÉTODO SOBRECARGA DE MÉTODOS (¡El nuevo!)
+    // --------------------------------------------------
+    public static void sobreCarga() {
+        System.out.println("\n---------- SOBRECARGA DE MÉTODOS ----------");
+        
+        SobreCarga n = new SobreCarga();
+        
+        // Java sabe qué método usar dependiendo de los argumentos que le enviamos
+        System.out.println("Suma de 2 enteros (10 + 50): " + n.suma(10, 50));
+        System.out.println("Suma de 3 enteros (4 + 4 + 4): " + n.suma(4, 4, 4));
+        System.out.println("Suma de 3 decimales (2.5 + 2.5 + 2.5): " + n.suma(2.5, 2.5, 2.5));
     }
 
 }
