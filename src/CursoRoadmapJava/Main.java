@@ -10,6 +10,7 @@ public class Main {
         Herencia();  
         instancia();
         modificador_de_acceso();
+        refernciayvalor();
         
     }
 
@@ -106,6 +107,29 @@ public class Main {
         System.out.println("Tiene una edad de: " + p2.getEdad() + " años");
         System.out.println("Su país de origen es: " + p2.getPais());
         System.out.println("Reside en la ciudad de: " + p2.getCiudad());
+    }
+    
+ // --------------------------------------------------
+    // 7. MÉTODO PASO POR REFERENCIA Y VALOR (¡El nuevo!)
+    // --------------------------------------------------
+    public static void refernciayvalor() {
+        System.out.println("\n---------- PASO POR REFERENCIA Y POR VALOR ----------");
+        
+        ReferenciaYporValor p = new ReferenciaYporValor();
+
+        // ---------- PRIMITIVO (Paso por Valor) ----------
+        System.out.println("--- Primitivo (copia el valor) ---");
+        int miNumero = 42;
+        System.out.println("Antes de la función: " + miNumero);
+        p.cambiarNumero(miNumero);
+        System.out.println("Después de la función: " + miNumero); // NO cambia, sigue siendo 42
+
+        // ---------- OBJETO/ARREGLO (Paso por Referencia) ----------
+        System.out.println("\n--- Arreglo/Objeto (copia la dirección de memoria) ---");
+        int[] miArreglo = {10, 20, 30};
+        System.out.println("Antes de la función (posición 0): " + miArreglo[0]);
+        p.cambiarArreglo(miArreglo);
+        System.out.println("Después de la función (posición 0): " + miArreglo[0]); // SÍ cambia, ahora es 999
     }
 
 }
