@@ -9,6 +9,7 @@ public class Main {
         herencia();   
         Herencia();  
         instancia();
+        modificador_de_acceso();
         
     }
 
@@ -84,6 +85,27 @@ public class Main {
         
         va.mostrar();
         va.sumar(15); // Sumamos un valor nuevo
+    }
+    
+ // --------------------------------------------------
+    // 6. MÉTODO MODIFICADORES DE ACCESO (¡El nuevo!)
+    // --------------------------------------------------
+    public static void modificador_de_acceso() {
+        System.out.println("\n---------- MODIFICADORES DE ACCESO ----------");
+        
+        ModificadorDeAccesoPersona p2 = new ModificadorDeAccesoPersona();
+        
+        // Usamos los setters públicos para modificar los atributos privados
+        p2.setNombre("Carlos");
+        p2.setEdad(28);
+        p2.setPais("México");
+        p2.setCiudad("Cancún");
+        
+        // Usamos los getters públicos para leer la información
+        System.out.println("El nombre registrado es: " + p2.getNombre());
+        System.out.println("Tiene una edad de: " + p2.getEdad() + " años");
+        System.out.println("Su país de origen es: " + p2.getPais());
+        System.out.println("Reside en la ciudad de: " + p2.getCiudad());
     }
 
 }
